@@ -1,0 +1,19 @@
+.glow {
+    animation: glowing 2000ms infinite;
+}
+
+@keyframes glowing {
+    0% {
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3592C6, 0 0 70px #3592C6, 0 0 80px #3592C6, 0 0 100px #3592C6, 0 0 150px #3592C6;
+    }
+    50% {
+        color: #3592C6;
+        text-shadow: none;
+    }
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3592C6, 0 0 70px #3592C6, 0 0 80px #3592C6, 0 0 100px #3592C6, 0 0 150px #3592C6;
+    }
+}
+

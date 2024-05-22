@@ -1,0 +1,21 @@
+.btn-custom {
+    background-color: #3592C6;
+    border-color: #3592C6;
+    margin: 7px;
+}
+
+.image__size {
+    height: 400px;
+    width: 400px;
+}
+
+.card__image__size {
+    height: 100px;
+    width: 100px;
+}
+
+.text__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

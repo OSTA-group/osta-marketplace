@@ -1,0 +1,7 @@
+# Ignore artifacts
+build
+coverage
+
+# Non js-files
+node_modules
+public
