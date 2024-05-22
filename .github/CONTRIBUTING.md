@@ -15,7 +15,7 @@ npm install
 ```
 
 #### Running in webbrowser
-Run the following command, a browser window should open automatically. If this does not happen, navigate to http://localhost:8100
+Run the following command, a browser window should open automatically. If this does not happen, navigate to http://localhost:5173
 ```bash
 npm run dev
 ```
