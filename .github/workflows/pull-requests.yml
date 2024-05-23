@@ -22,9 +22,11 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@417ae3ccd767c252f5661f1ace9f835f9654f2b5
 
-    - name: Build and test with Gradle Wrapper
-    - run: cd BackEnd && ./gradlew build
-    - run: cd BackEnd && ./gradlew bootTestRun
+    - name: Build
+      run: cd BackEnd && ./gradlew build
+
+    - name: Run tests
+      run: cd BackEnd && ./gradlew bootTestRun
 
   frontend:
     runs-on: ubuntu-latest
