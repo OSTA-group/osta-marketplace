@@ -81,6 +81,10 @@ public class ExtensionsSynchronizerSchedule {
     }
 
     private void updateDatabase(ExtensionDto[] extensions) {
+        if(extensions.length > 0) {
+            this.extensionRepository.deleteAll();
+        }
+
         for (var dto : extensions) {
             Extension extension = createExtensionEntity(dto);
             this.extensionRepository.save(extension);
