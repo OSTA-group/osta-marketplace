@@ -30,6 +30,7 @@ export type MarketPlaceExtensionDetails = {
   description: string
   area: string
   type: string
+  languages: string
   properties: Record<string, string>
   versions: Version[]
 }
