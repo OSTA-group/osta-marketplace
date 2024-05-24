@@ -15,5 +15,4 @@ If you made UI changes, what are the before and afters?
 
 ### 🏎 Quality check
 - [ ] Are there any errors, console logs, debuggers or leftover code in your changes?
-
 - [ ] Did you update the documentation for your code?
