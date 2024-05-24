@@ -22,6 +22,7 @@ export type MarketplaceExtension = {
  * @property {string} description - Description of the extension.
  * @property {string} area - Area where the extension is available.
  * @property {string} type - Type of the extension.
+ * @property {string} languages - Language of the extension.
  * @property {Record<string, string>} properties - Additional properties of the extension.
  * @property {Version[]} versions - List of available versions.
  */
