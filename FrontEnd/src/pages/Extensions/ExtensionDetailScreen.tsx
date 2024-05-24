@@ -30,6 +30,7 @@ export function ExtensionDetailScreen() {
       <h2>Extension: {extensionDetails.name}</h2>
       <p>Area: {extensionDetails.area}</p>
       <p>Type: {extensionDetails.type}</p>
+      <p>Language(s): {extensionDetails.languages}</p>
       <p>{extensionDetails.description}</p>
       {Object.entries(extensionDetails.properties ?? {}).length > 0 && (
         <>
