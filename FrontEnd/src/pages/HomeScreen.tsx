@@ -20,7 +20,7 @@ export function HomeScreen() {
           <h1 className="fw-bold">Your travel knowledge buddy</h1>
           <p>Get ready-to-use knowledge from contributors all around the world.</p>
           <Button className="btn-custom">Download the app for free</Button>
-          <Button className="btn-custom" href={'https://github.com/BauwenDR/osta/blob/main/.github/CONTRIBUTING.md'}>
+          <Button className="btn-custom" href={'https://github.com/BauwenDR/osta'}>
             Contribute
           </Button>
         </Col>
