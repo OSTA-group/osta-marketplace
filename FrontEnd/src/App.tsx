@@ -11,9 +11,9 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import '../src/components/css/fonts/index.css'
 import '../src/components/css/effect.css'
 import { Footer } from './components/Footer.tsx'
+import { PrivacyScreen } from './pages/PrivacyScreen.tsx'
 
 function App() {
-
   const queryClient = new QueryClient({
     queryCache: new QueryCache(),
     mutationCache: new MutationCache(),
@@ -33,6 +33,7 @@ function App() {
                 <Route path="/about" element={<AboutScreen />} />
                 <Route path="/extension" element={<ExtensionScreen />} />
                 <Route path="/extension/:extensionId" element={<ExtensionDetailScreen />} />
+                <Route path="/privacy" element={<PrivacyScreen />} />
               </Routes>
             </div>
             <Footer />
