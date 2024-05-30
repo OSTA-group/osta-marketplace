@@ -1,0 +1,24 @@
+spring:
+  application.name: OSTA-BackEnd
+
+  datasource:
+    url: jdbc:h2:mem:osta-test
+    driverClassName: org.h2.Driver
+    username: osta-test
+    password: osta-test
+
+  jpa:
+    database: h2
+    defer-datasource-initialization: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate.hibernate.dialect: H2SqlDialect
+
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:data.sql
