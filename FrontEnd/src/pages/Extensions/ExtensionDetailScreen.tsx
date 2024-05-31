@@ -49,7 +49,7 @@ export function ExtensionDetailScreen() {
           <Table striped bordered hover>
             <thead>
             <tr>
-              <th className={'col col-10'}>URL</th>
+              <th className={'col col-9'}>URL</th>
               <th className={'col col-2'}>Version</th>
             </tr>
             </thead>
