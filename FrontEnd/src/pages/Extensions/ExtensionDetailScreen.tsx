@@ -1,7 +1,6 @@
 import { useExtension } from '../../hooks/useExtension.ts'
-import { Container, Table } from 'react-bootstrap'
+import { Col, Container, Row, Table } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
-import { Version } from '../../types'
 
 export function ExtensionDetailScreen() {
 
@@ -27,40 +26,44 @@ export function ExtensionDetailScreen() {
 
   return (
     <Container className="my-4">
-      <h2>Extension: {extensionDetails.name}</h2>
-      <p>Area: {extensionDetails.area}</p>
-      <p>Type: {extensionDetails.type}</p>
-      <p>Language(s): {extensionDetails.languages}</p>
-      <p>{extensionDetails.description}</p>
-      {Object.entries(extensionDetails.properties ?? {}).length > 0 && (
-        <>
-          <h3>Extra Properties</h3>
-          <ul>
-            {Object.entries(extensionDetails.properties).map(([key, value]) => (
-              <li key={key}>
-                <strong>{key}: </strong> {value}
-              </li>
+      <Row>
+        <Col className="col-12">
+          <h2>Extension: {extensionDetails.name}</h2>
+          <p>Area: {extensionDetails.area}</p>
+          <p>Type: {extensionDetails.type}</p>
+          <p>Language(s): {extensionDetails.languages}</p>
+          <p>{extensionDetails.description}</p>
+          {Object.entries(extensionDetails.properties ?? {}).length > 0 && (
+            <>
+              <h3>Extra Properties</h3>
+              <ul>
+                {Object.entries(extensionDetails.properties).map(([key, value]) => (
+                  <li key={key}>
+                    <strong>{key}: </strong> {value}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          <h3>Version history</h3>
+          <Table striped bordered hover>
+            <thead>
+            <tr>
+              <th className={'col col-10'}>URL</th>
+              <th className={'col col-2'}>Version</th>
+            </tr>
+            </thead>
+            <tbody>
+            {extensionDetails.versions.map((version) => (
+              <tr key={version.url}>
+                <td className="table__url">{version.url}</td>
+                <td>{version.version}</td>
+              </tr>
             ))}
-          </ul>
-        </>
-      )}
-      <h3>Version history</h3>
-      <Table striped bordered hover>
-        <thead>
-        <tr>
-          <th>URL</th>
-          <th>Version</th>
-        </tr>
-        </thead>
-        <tbody>
-        {extensionDetails.versions.map((version: Version) => (
-          <tr key={version.url}>
-            <td>{version.url}</td>
-            <td>{version.version}</td>
-          </tr>
-        ))}
-        </tbody>
-      </Table>
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
     </Container>
   )
 }
