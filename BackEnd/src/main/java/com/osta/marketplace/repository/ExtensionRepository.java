@@ -25,7 +25,7 @@ public interface ExtensionRepository extends JpaRepository<Extension, UUID> {
      */
     @Query("""
             SELECT s FROM Extension s JOIN FETCH s.versions
-            WHERE (:area IS NULL OR s.area = :area)
+            WHERE (:area IS NULL OR LOWER(s.area) = LOWER(:area))
             AND (:nameContains IS NULL OR upper(s.name) LIKE '%' || upper(:nameContains) || '%')
             """)
     List<Extension> findAllWithVersions(String area, String nameContains, Pageable pageable);

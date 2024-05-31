@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    default: test
   application.name: OSTA-BackEnd
 
   datasource:
@@ -22,3 +24,6 @@ spring:
     init:
       mode: always
       data-locations: classpath:data.sql
+
+osta:
+  data-url: ""
