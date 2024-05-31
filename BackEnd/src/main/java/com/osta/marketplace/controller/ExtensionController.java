@@ -4,6 +4,7 @@ import com.osta.marketplace.controller.dto.ExtensionDetailResponse;
 import com.osta.marketplace.controller.dto.ExtensionResponse;
 import com.osta.marketplace.controller.dto.ExtensionVersionResponse;
 import com.osta.marketplace.domain.Extension;
+import com.osta.marketplace.exception.NoVersionException;
 import com.osta.marketplace.service.ExtensionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -48,6 +49,10 @@ public class ExtensionController {
     @Transactional(readOnly = true)
     public ResponseEntity<ExtensionDetailResponse> getExtensionDetails(@PathVariable UUID extensionId) {
         Extension requestedExtension = this.extensionService.getExtensionDetails(extensionId);
+
+        if(requestedExtension.getVersions() == null || requestedExtension.getVersions().isEmpty()) {
+            throw new NoVersionException();
+        }
 
         return ResponseEntity.ok(new ExtensionDetailResponse(
                 requestedExtension.getName(),
