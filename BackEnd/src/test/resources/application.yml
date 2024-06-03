@@ -26,4 +26,4 @@ spring:
       data-locations: classpath:data.sql
 
 osta:
-  data-url: ""
+  data-url: "https://example.com"
