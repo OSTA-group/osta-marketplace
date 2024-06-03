@@ -1,4 +1,4 @@
-package com.osta.marketplace.shedule.dto;
+package com.osta.marketplace.schedule.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

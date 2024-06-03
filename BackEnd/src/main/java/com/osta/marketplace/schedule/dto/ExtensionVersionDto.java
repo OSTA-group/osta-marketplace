@@ -1,4 +1,4 @@
-package com.osta.marketplace.shedule.dto;
+package com.osta.marketplace.schedule.dto;
 
 public record ExtensionVersionDto(
         int version,
