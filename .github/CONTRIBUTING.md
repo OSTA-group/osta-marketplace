@@ -6,10 +6,10 @@ Anyone is welcome to open [issues](https://github.com/BauwenDR/osta-marketplace/
 In order to build the app make sure you have the following installed:
 - NodeJS + NPM
 - Java 21
-- Gradle (or an IDE with build in gradle tools)
+- Gradle (or an IDE with built-in gradle tools)
 
 ### Installing
-Run the following command to install al necessary packages:
+Run the following command to install all necessary packages:
 ```bash
 npm install
 ```
