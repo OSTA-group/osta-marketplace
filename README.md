@@ -8,6 +8,6 @@ You can find the working of our services [here](https://github.com/BauwenDR/osta
 See [contributing](https://github.com/BauwenDR/osta-marketplace/blob/main/.github/CONTRIBUTING.md).
 
 ## OSTA Projects
-- [OSTA App](https://github.com/BauwenDR/osta)
-- [OSTA Extensions](https://github.com/BauwenDR/osta-extensions)
+- [OSTA App](https://github.com/OSTA-group/osta)
+- [OSTA Extensions](https://github.com/OSTA-group/osta-extensions)
 - [OSTA Wikipedia Extension](https://github.com/BauwenDR/osta-wikipedia-extension)
