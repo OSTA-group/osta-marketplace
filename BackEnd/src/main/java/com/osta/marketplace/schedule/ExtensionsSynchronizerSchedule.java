@@ -1,5 +1,6 @@
-package com.osta.marketplace.shedule;
+package com.osta.marketplace.schedule;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.osta.marketplace.domain.Extension;
 import com.osta.marketplace.domain.ExtensionVersion;
@@ -7,7 +8,7 @@ import com.osta.marketplace.domain.PythonExtension;
 import com.osta.marketplace.domain.WebExtension;
 import com.osta.marketplace.repository.ExtensionRepository;
 import com.osta.marketplace.repository.VersionRepository;
-import com.osta.marketplace.shedule.dto.ExtensionDto;
+import com.osta.marketplace.schedule.dto.ExtensionDto;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.security.MessageDigest;
@@ -33,16 +35,17 @@ public class ExtensionsSynchronizerSchedule {
     private final ExtensionRepository extensionRepository;
     private final VersionRepository versionRepository;
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
 
     @Value("${osta.data-url}")
-    private String databaseUrl;
+    private String databaseUrl = "";
     private String previousHash = "";
 
-    public ExtensionsSynchronizerSchedule(ExtensionRepository extensionRepository, VersionRepository versionRepository, ObjectMapper objectMapper) {
+    public ExtensionsSynchronizerSchedule(ExtensionRepository extensionRepository, VersionRepository versionRepository, RestTemplate restTemplate, ObjectMapper objectMapper) {
         this.extensionRepository = extensionRepository;
         this.versionRepository = versionRepository;
+        this.restTemplate = restTemplate;
         this.objectMapper = objectMapper;
     }
 
@@ -68,8 +71,8 @@ public class ExtensionsSynchronizerSchedule {
 
                 this.previousHash = currentHash;
             }
-        } catch (Exception e) {
-            LOGGER.error(e.getLocalizedMessage(), e);
+        } catch (MissingResourceException | RestClientException | NoSuchAlgorithmException | JsonProcessingException e) {
+            LOGGER.error("Failed to download extensions from GitHub: {}", e.getLocalizedMessage(), e);
         }
     }
 
