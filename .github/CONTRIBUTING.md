@@ -1,5 +1,5 @@
 ## Contributing
-Anyone is welcome to open [issues](https://github.com/BauwenDR/osta-marketplace/issues) and/or pull-requests for bugfixes, feature-requests and/or ideas. If unsure where to start we encourage you to open a [discussion](https://github.com/BauwenDR/osta-marketplace/discussions) topic first.
+Anyone is welcome to open [issues](https://github.com/OSTA-group/osta-marketplace/issues) and/or pull-requests for bugfixes, feature-requests and/or ideas. If unsure where to start we encourage you to open a [discussion](https://github.com/OSTA-group/osta-marketplace/discussions) topic first.
 
 ## How to build
 ### Required programs
@@ -32,7 +32,7 @@ Before you start coding, follow these steps:
   - Commit your changes with clear and concise messages.
 
 ### 3. Pull request
-  - Follow the [checklist](https://github.com/BauwenDR/osta-marketplace/blob/main/.github/pull_request_template.md) to make sure that you're 100% done.
+  - Follow the [checklist](https://github.com/OSTA-group/osta-marketplace/blob/main/.github/pull_request_template.md) to make sure that you're 100% done.
   - Once your changes are ready, open a pull request (PR) to merge your branch into to main repository
 
 Happy coding! 🚀
