@@ -1,8 +1,8 @@
 # OSTA Marketplace
-The OSTA Marketplace is a website that provides extensions for the [Open Source Travel Application](https://github.com/BauwenDR/osta). Extensions are synchronized with the json file from [this](https://github.com/BauwenDR/osta-extensions) project.
+The OSTA Marketplace is a website that provides extensions for the [Open Source Travel Application](https://github.com/OSTA-group/osta). Extensions are synchronized with the json file from [this](https://github.com/OSTA-group/osta-extensions) project.
 
 ## Documentation
-You can find the working of our services [here](https://github.com/BauwenDR/osta/blob/main/.github/OSTA-Technical-Documentation.pdf).
+You can find the working of our services [here](https://github.com/OSTA-group/osta/wiki/TechnicalDocumentation).
 
 ## Contributing
 See [contributing](https://github.com/BauwenDR/osta-marketplace/blob/main/.github/CONTRIBUTING.md).
