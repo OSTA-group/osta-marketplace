@@ -28,7 +28,7 @@
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
-    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@vitejs/plugin-react-swc": "^3.8.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -38,7 +38,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2",
-    "vite": "^5.4.6",
-    "vitest": "^1.6.0"
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8"
   }
 }
