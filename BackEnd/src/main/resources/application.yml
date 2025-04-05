@@ -19,4 +19,4 @@ spring:
       hibernate.hibernate.dialect: H2SqlDialect
 
 osta:
-  data-url: "https://raw.githubusercontent.com/BauwenDR/osta-extensions/main/extensions.json?token=GHSAT0AAAAAACSAX7JC576NDQ2G222INTWQZSN3KHA"
+  data-url: https://raw.githubusercontent.com/OSTA-group/osta-extensions/refs/heads/main/extensions.json
